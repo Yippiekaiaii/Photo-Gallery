@@ -3,6 +3,7 @@
 let galleryImages = document.querySelectorAll(".gallery-img"); 
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
+console.log(galleryImages);
 
 if(galleryImages){
     galleryImages.forEach(function(image,index){
@@ -15,7 +16,7 @@ if(galleryImages){
             getLatestOpenedImg = index + 1;
 
             let container = document.body; //set where we are going to place the open image - in this case its going in the page body
-            let newImgWindow = document.createElement("div"); //create a new div to put the iamge in
+            let newImgWindow = document.createElement("div"); //create a new div to put the image in
             container.appendChild(newImgWindow); //adds the div into the page body
             newImgWindow.setAttribute("class","img-window");
             newImgWindow.setAttribute("onclick","closeImg()");
